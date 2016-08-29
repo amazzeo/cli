@@ -30,6 +30,10 @@ func (c *Context) NumFlags() int {
 	return c.flagSet.NFlag()
 }
 
+func (c *Context) Lookup(name string) *flag.Flag {
+  return c.flagSet.Lookup(name)
+}
+
 // Set sets a context flag to a value.
 func (c *Context) Set(name, value string) error {
 	return c.flagSet.Set(name, value)
